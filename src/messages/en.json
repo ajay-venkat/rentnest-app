@@ -1,0 +1,34 @@
+{
+  "Navigation": {
+    "dashboard": "Executive Dashboard",
+    "properties": "Properties Portfolio",
+    "tenants": "Tenants Directory",
+    "rent": "Rent Tracker & Ledger",
+    "agreements": "Agreement Manager",
+    "verification": "Tenant Verification",
+    "reminders": "Automated Reminders",
+    "reports": "Financial Reports",
+    "billing": "Subscription & Billing",
+    "settings": "Settings & Privacy"
+  },
+  "Dashboard": {
+    "welcome": "Welcome back, Landlord!",
+    "totalUnits": "Active Units",
+    "occupancy": "Occupancy Rate",
+    "collected": "Collected This Month",
+    "pending": "Pending Rent Dues",
+    "quickActions": "Quick Actions",
+    "addProperty": "Add Property",
+    "addTenant": "Add Tenant",
+    "renewAgreement": "1-Click Renew",
+    "sendReminder": "Send Reminders"
+  },
+  "Common": {
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "search": "Search...",
+    "language": "Language / மொழி",
+    "upgrade": "Upgrade Plan"
+  }
+}

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#140067", "tertiary-fixed": "#ffdea8", "primary": "#006c49", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "surface": "#fbf8ff", "error": "#ba1a1a", "primary-container": "#10b981", "inverse-on-surface": "#f0efff", "surface-dim": "#d4d8f7", "on-tertiary-container": "#4d3500", "on-primary-container": "#00422b", "secondary-fixed-dim": "#c5c0ff", "surface-tint": "#006c49", "background": "#fbf8ff", "on-primary": "#ffffff", "surface-bright": "#fbf8ff", "secondary-fixed": "#e3dfff", "tertiary-fixed-dim": "#f9bc45", "surface-variant": "#dde1ff", "surface-container-high": "#e5e7ff", "tertiary": "#7c5800", "primary-fixed-dim": "#4edea3", "secondary-container": "#938afd", "tertiary-container": "#d19922", "on-surface": "#151a31", "on-surface-variant": "#3c4a42", "on-tertiary-fixed": "#271900", "on-tertiary-fixed-variant": "#5e4200", "secondary": "#584ebe", "inverse-primary": "#4edea3", "primary-fixed": "#6ffbbe", "inverse-surface": "#2a2f47", "on-primary-fixed": "#002113", "outline": "#6c7a71", "on-error": "#ffffff", "outline-variant": "#bbcabf", "error-container": "#ffdad6", "on-background": "#151a31", "surface-container-highest": "#dde1ff", "on-error-container": "#93000a", "on-primary-fixed-variant": "#005236", "on-secondary-container": "#28178e", "surface-container-low": "#f3f2ff", "surface-container": "#ececff", "on-secondary-fixed-variant": "#3f34a4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "space-md": "1rem", "gutter": "1rem", "gutter-tablet": "1.5rem", "space-lg": "1.5rem", "margin-tablet": "2rem", "gutter-desktop": "2rem", "space-sm": "0.5rem", "margin": "1rem", "margin-desktop": "3rem", "space-xs": "0.25rem" }, "fontFamily": { "body-lg": [ "Plus Jakarta Sans" ], "financial-xl": [ "Inter" ], "display-lg-mobile": [ "Plus Jakarta Sans" ], "label-sm": [ "Inter" ], "label-md": [ "Inter" ], "headline-xl": [ "Plus Jakarta Sans" ], "financial-md": [ "Inter" ], "display-lg": [ "Plus Jakarta Sans" ], "label-lg": [ "Inter" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "financial-xl-mobile": [ "Inter" ], "body-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "financial-xl": [ "32px", { "lineHeight": "38px", "fontWeight": "700" } ], "display-lg-mobile": [ "32px", { "lineHeight": "40px", "fontWeight": "800" } ], "label-sm": [ "11px", { "lineHeight": "14px", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "fontWeight": "500" } ], "headline-xl": [ "28px", { "lineHeight": "36px", "fontWeight": "700" } ], "financial-md": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "display-lg": [ "40px", { "lineHeight": "48px", "fontWeight": "800" } ], "label-lg": [ "14px", { "lineHeight": "18px", "fontWeight": "600" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "fontWeight": "700" } ], "headline-md": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "financial-xl-mobile": [ "26px", { "lineHeight": "32px", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low z-50 flex flex-col justify-between p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm px-space-xs py-space-xs"><img alt="Brand logo. - Primary color: #10b981
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VN5wXcVskC2OaGVtI326tn7FPbxRGPRkkIW9ZMoF308ofHE6pURgHgpXQXsHv_7s2nrzP3EMqtaY2Zgk4GIzIQWBXLXwA9A-7_-jTJQNNGuAGzR80R76yW_GrXKA3ztoz580jUmw1TvAOtlwURt1I0ODPXgkSam9Q22IjCpUsufLuL24a4Hv9nPZX2stKgptPSQ00adTUA31rH7u_ybZHQLC0nEwvwdpuElL2S4Lce_8phvwq2U4qPSw"/><span class="font-headline-lg text-headline-lg tracking-tight text-on-surface">RentNest</span></div><div class="flex items-center justify-between px-space-sm py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">apartment</span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface truncate max-w-[140px]">Chennai Portfolio</span><span class="font-label-sm text-label-sm text-on-surface-variant">3 Properties Active</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-md"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl transition-all bg-primary-container text-on-primary-container font-headline-md" data-path="properties" href="#"><span class="material-symbols-outlined text-[20px]">real_estate_agent</span><span>Properties</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="rent-ledger" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Rent Ledger</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="agreements" href="#"><span class="material-symbols-outlined text-[20px]">description</span><span>Agreements</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tenants" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Tenants</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reminders" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span>Reminders</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></a></nav></div><div class="pt-space-md"><div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1V2YdLrcc_MmO4FP-s6yKc5Nn2hgM-b6O6zEvP9QxFn1ct2mmFiaGcHxRscz6k6M6BFQ9Lg7IidiNS8TAWtNtN7-dY3LDet7fo7UpHFIiKiRU3J15DJV_j3hFmStCroxzt-_Y-NpBKAYZXiUbgwIVstvOZDNYQPrzEP2_WVLAh_uOBN3GJALQd7nkVQ_BBXM6Te-FEQvPHmF4umkwLh0melR9spph0Je0n4SPA1xk4Pxckuty2e7lur0A"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface">Rajeshwar S.</span><div class="flex items-center gap-1"><span class="font-label-sm text-label-sm text-tertiary font-semibold">Pro Landlord</span></div></div></div><button class="text-on-surface-variant hover:text-on-surface flex items-center p-space-xs" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-2 rounded-xl shadow-[0_2px_8px_-2px_rgba(11,16,38,0.04)] w-full text-on-surface-variant focus-within:text-on-surface"><span class="material-symbols-outlined text-[18px] text-outline">search</span><input class="bg-transparent w-full text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none" placeholder="Search tenants, properties, transactions, agreement deeds..." type="text"/><kbd class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1.5 rounded-xl bg-surface-container font-label-md text-label-md text-on-surface cursor-pointer hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">domain</span><span>All Units</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><button class="inline-flex items-center gap-space-xs px-space-md py-2 bg-gradient-to-r from-primary-container to-[#06b6d4] text-on-primary rounded-xl font-label-lg text-label-lg shadow-[0_4px_14px_rgba(16,185,129,0.35)] hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Quick Action</span></button><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/30" src="https://lh3.googleusercontent.com/aida/AEtjO1V2YdLrcc_MmO4FP-s6yKc5Nn2hgM-b6O6zEvP9QxFn1ct2mmFiaGcHxRscz6k6M6BFQ9Lg7IidiNS8TAWtNtN7-dY3LDet7fo7UpHFIiKiRU3J15DJV_j3hFmStCroxzt-_Y-NpBKAYZXiUbgwIVstvOZDNYQPrzEP2_WVLAh_uOBN3GJALQd7nkVQ_BBXM6Te-FEQvPHmF4umkwLh0melR9spph0Je0n4SPA1xk4Pxckuty2e7lur0A"/></div></div></header><main class="flex-1 pt-16 bg-surface px-gutter-desktop py-space-xl"><div class="flex flex-col w-full">
+<!-- Top Command Header -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Institutional Real Estate Hub</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tamil Nadu Operations (RERA Verified)</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Property Portfolio &amp; Asset Management</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">3 Multi-Unit Properties • 18 Total Units (17 Occupied, 1 Vacant • 94.4% Occupancy)</p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg rounded-xl transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span>Consolidated P&amp;L</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 bg-gradient-to-r from-primary-container to-[#06b6d4] text-on-primary font-label-lg text-label-lg rounded-xl shadow-md hover:shadow-lg hover:opacity-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Add New Property</span>
+</button>
+</div>
+</div>
+<!-- Search and Categorization Filter Bar -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-2 rounded-lg flex-1 text-on-surface-variant focus-within:text-on-surface focus-within:bg-surface-container">
+<span class="material-symbols-outlined text-[20px] text-outline">tune</span>
+<input class="bg-transparent w-full text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none" id="propertySearchInput" placeholder="Filter by property name, locality (Anna Nagar, ECR, Guindy), unit type..." type="text"/>
+<span class="font-label-sm text-label-sm text-outline-variant bg-surface px-1.5 py-0.5 rounded">Search</span>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 md:pb-0" id="categoryFilterContainer">
+<button class="filter-tab active-tab px-space-md py-2 rounded-full font-label-md text-label-md bg-inverse-surface text-inverse-on-surface shadow-sm transition-all whitespace-nowrap" data-filter="all" type="button">
+          All (3)
+        </button>
+<button class="filter-tab px-space-md py-2 rounded-full font-label-md text-label-md bg-surface text-on-surface hover:bg-surface-container transition-all whitespace-nowrap" data-filter="residential" type="button">
+          Residential (2)
+        </button>
+<button class="filter-tab px-space-md py-2 rounded-full font-label-md text-label-md bg-surface text-on-surface hover:bg-surface-container transition-all whitespace-nowrap" data-filter="commercial" type="button">
+          Commercial (1)
+        </button>
+<div class="h-6 w-px bg-surface-container-high mx-1 hidden sm:block"></div>
+<button class="p-2 rounded-lg bg-surface text-on-surface hover:bg-surface-container transition-colors" title="Grid View" type="button">
+<span class="material-symbols-outlined text-[20px]">view_agenda</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Portfolio Performance Metric Showcase -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-xl">
+<!-- Metric 1: Gross Asset Yield -->
+<div class="relative overflow-hidden bg-gradient-to-br from-[#0B1026] via-[#1b1c3a] to-[#252055] text-on-primary rounded-xl p-space-lg shadow-md flex flex-col justify-between min-h-[170px]">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider font-semibold">Monthly Gross Inflow</span>
+<h2 class="font-financial-xl text-financial-xl text-surface-bright mt-1">₹5,73,000<span class="font-body-sm text-body-sm text-outline-variant font-normal"> / mo</span></h2>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest/10 backdrop-blur-md flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-[22px]">trending_up</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container-lowest/10">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>94.4% Rent On-Schedule</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant">Target ₹6.23L</span>
+</div>
+</div>
+<!-- Metric 2: Unrealized Rent -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between min-h-[170px]">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-semibold">Unrealized Rent (Vacancy)</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+</div>
+<h2 class="font-financial-xl text-financial-xl text-on-surface mt-1">₹50,000<span class="font-body-sm text-body-sm text-on-surface-variant font-normal"> / mo</span></h2>
+</div>
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed/40 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">domain_disabled</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">1 Unit Available in ECR Villa</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold bg-tertiary-fixed/30 px-2 py-0.5 rounded-full">Turnaround ETA: 4 Days</span>
+</div>
+</div>
+<!-- Metric 3: Maintenance Escrow -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between min-h-[170px]">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Active Escrow &amp; Sinking Fund</span>
+<h2 class="font-financial-xl text-financial-xl text-on-surface mt-1">₹1,20,000</h2>
+</div>
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">shield</span>
+<span>HDFC Current A/C #4491</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Fully Funded</span>
+</div>
+</div>
+</div>
+<!-- Real Estate Showcase Grid -->
+<div class="flex flex-col gap-space-xl" id="propertiesContainer">
+<!-- PROPERTY CARD 1: Greenfield Heights -->
+<section class="property-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all hover:shadow-md" data-category="residential" data-keywords="greenfield heights anna nagar residential apartment 3bhk">
+<div class="p-space-lg flex flex-col lg:flex-row gap-space-lg">
+<!-- Asset Visual & Prime Specs Column -->
+<div class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-space-md">
+<div class="relative h-52 w-full rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="An upscale modern residential apartment building exterior in Anna Nagar Chennai at twilight with warm interior lighting glowing from balconies, lush tropical landscaping at the base, elegant architectural symmetry, photographed in crisp architectural style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpmCj1Udss0jHiSaV7VdKlwp9VfEw4Kh5lDTiS5S-So_UzPbV1RgsSXaeK7hfNVe-HFJ2caCP02dHuQOtrF6LLDBE3cs5tei2MMa7cV1HlUeKbRm525oz8oUA36vG6a-iOOMJHiGXj2DaGdenyz5RxFoVdKBfFP1zwXObQdFT-cLKOYOMSntNVJjXJBtuoDaHtLuQwMc2-5zU591KTvVJKY3g6vEoHxyYXPfBVHbMhkENur_TH0XPj"/>
+<div class="absolute top-space-sm left-space-sm">
+<span class="inline-flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-full font-label-sm text-label-sm text-primary font-bold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Residential Multi-Tenant
+              </span>
+</div>
+<div class="absolute bottom-space-sm right-space-sm bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded">
+              Reg #TN/NH/2021/0082
+            </div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contracted Yield</span>
+<span class="font-financial-md text-financial-md text-primary font-bold">₹1,68,000<span class="font-body-sm text-body-sm font-normal text-on-surface-variant">/mo</span></span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Average per unit:</span>
+<span class="font-semibold text-on-surface font-label-md text-label-md">₹28,000 / mo</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-primary-container h-full rounded-full w-full"></div>
+</div>
+<div class="flex justify-between items-center font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>Collection Status</span>
+<span class="text-primary font-semibold">100% Up to Date</span>
+</div>
+</div>
+</div>
+<!-- Main Data Pane -->
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<!-- Header Row -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm mb-space-sm">
+<div>
+<div class="flex items-center gap-space-sm">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Greenfield Heights</h3>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-primary-container/20 text-on-primary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    6/6 Units Occupied (100%)
+                  </span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[18px] text-outline">location_on</span>
+<span>14/2, 2nd Avenue, Anna Nagar East, Chennai, TN 600102</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Property Settings" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Features Tags -->
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">3BHK Floorplans (1,650 sq.ft)</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Dual Schindler Elevators</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">100% DG Power Backup</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Covered Stilt Parking</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">R.O. Water Plant</span>
+</div>
+<!-- Units Table -->
+<div class="rounded-xl overflow-hidden bg-surface-container-low mb-space-md">
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<tr>
+<th class="py-2 px-space-md">Unit #</th>
+<th class="py-2 px-space-md">Tenant Name</th>
+<th class="py-2 px-space-md">Rent / Month</th>
+<th class="py-2 px-space-md">Payment Status</th>
+<th class="py-2 px-space-md">Lease Valid Till</th>
+<th class="py-2 px-space-md text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest/40 text-on-surface">
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-space-md font-label-md text-label-md font-semibold text-primary">#101</td>
+<td class="py-2.5 px-space-md font-label-md text-label-md">Sundararajan M.</td>
+<td class="py-2.5 px-space-md font-financial-md text-financial-md text-[14px]">₹28,000</td>
+<td class="py-2.5 px-space-md"><span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-on-primary-container font-label-sm text-label-sm">Paid (1st May)</span></td>
+<td class="py-2.5 px-space-md text-on-surface-variant">31 Mar 2026</td>
+<td class="py-2.5 px-space-md text-right"><button class="text-primary hover:underline font-label-sm text-label-sm" type="button">Deed</button></td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-space-md font-label-md text-label-md font-semibold text-primary">#201</td>
+<td class="py-2.5 px-space-md font-label-md text-label-md">Kavitha Narayanan</td>
+<td class="py-2.5 px-space-md font-financial-md text-financial-md text-[14px]">₹28,000</td>
+<td class="py-2.5 px-space-md"><span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-on-primary-container font-label-sm text-label-sm">Paid (2nd May)</span></td>
+<td class="py-2.5 px-space-md text-on-surface-variant">14 Jul 2025</td>
+<td class="py-2.5 px-space-md text-right"><button class="text-primary hover:underline font-label-sm text-label-sm" type="button">Deed</button></td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-space-md font-label-md text-label-md font-semibold text-primary">#202</td>
+<td class="py-2.5 px-space-md font-label-md text-label-md">Arunachalam &amp; Co. (Adv.)</td>
+<td class="py-2.5 px-space-md font-financial-md text-financial-md text-[14px]">₹28,000</td>
+<td class="py-2.5 px-space-md"><span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-on-primary-container font-label-sm text-label-sm">Paid (1st May)</span></td>
+<td class="py-2.5 px-space-md text-on-surface-variant">30 Nov 2025</td>
+<td class="py-2.5 px-space-md text-right"><button class="text-primary hover:underline font-label-sm text-label-sm" type="button">Deed</button></td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-space-md font-label-md text-label-md font-semibold text-primary">#301</td>
+<td class="py-2.5 px-space-md font-label-md text-label-md">Deepak Sivakumar</td>
+<td class="py-2.5 px-space-md font-financial-md text-financial-md text-[14px]">₹28,000</td>
+<td class="py-2.5 px-space-md"><span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-on-primary-container font-label-sm text-label-sm">Paid (3rd May)</span></td>
+<td class="py-2.5 px-space-md text-on-surface-variant">31 Jan 2026</td>
+<td class="py-2.5 px-space-md text-right"><button class="text-primary hover:underline font-label-sm text-label-sm" type="button">Deed</button></td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-space-md font-label-md text-label-md font-semibold text-primary">#302</td>
+<td class="py-2.5 px-space-md font-label-md text-label-md">Priyanka V.</td>
+<td class="py-2.5 px-space-md font-financial-md text-financial-md text-[14px]">₹28,000</td>
+<td class="py-2.5 px-space-md"><span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-on-primary-container font-label-sm text-label-sm">Paid (1st May)</span></td>
+<td class="py-2.5 px-space-md text-on-surface-variant">28 Feb 2026</td>
+<td class="py-2.5 px-space-md text-right"><button class="text-primary hover:underline font-label-sm text-label-sm" type="button">Deed</button></td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-2.5 px-space-md font-label-md text-label-md font-semibold text-primary">#402</td>
+<td class="py-2.5 px-space-md font-label-md text-label-md">Gopinath K.</td>
+<td class="py-2.5 px-space-md font-financial-md text-financial-md text-[14px]">₹28,000</td>
+<td class="py-2.5 px-space-md"><span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-on-primary-container font-label-sm text-label-sm">Paid (4th May)</span></td>
+<td class="py-2.5 px-space-md text-on-surface-variant">30 Oct 2025</td>
+<td class="py-2.5 px-space-md text-right"><button class="text-primary hover:underline font-label-sm text-label-sm" type="button">Deed</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Bottom Action Deck -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">lock_clock</span>
+<span>Average Lease Tenure: 2.4 Years</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded-xl bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">history_edu</span>
+<span>View Registered Deeds</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded-xl bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt</span>
+<span>Download Property P&amp;L</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded-xl bg-gradient-to-r from-primary-container to-[#06b6d4] font-label-md text-label-md text-on-primary shadow-sm hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Manage Units &amp; Leases</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROPERTY CARD 2: Palm Breeze Enclave -->
+<section class="property-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all hover:shadow-md" data-category="residential" data-keywords="palm breeze enclave ecr palavakkam residential luxury beach villa 4bhk">
+<div class="p-space-lg flex flex-col lg:flex-row gap-space-lg">
+<!-- Asset Visual & Prime Specs Column -->
+<div class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-space-md">
+<div class="relative h-52 w-full rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Modern luxury beachfront villa complex with private plunge pool, coastal palms, pristine white architecture, wooden decking, warm twilight sky with subtle turquoise and indigo hues in East Coast Road Chennai" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_nIab9UmEgbY0yxqgTlZHMb3GYQ4IOi1578sOmG5kB4AkPxhju7EMdNkYoBNa95B8kJKb6Rn3ZePtWOL82ahYrAJVqaSoHfRPueuGmJxJ4_zcnQkE9Y9BaLAJNuGDpsus8j0TGiObZVaVqxV7g0-w5uqdrL9R-UsGX8ZwqhvERf6qG65ggaZSBeotvk2g2F4aercDjf760jPkA2EruIp-6EJpRdDE00Fv6Z5OVtuhwGaLdSnygqqs"/>
+<div class="absolute top-space-sm left-space-sm">
+<span class="inline-flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-full font-label-sm text-label-sm text-tertiary font-bold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-ping"></span>
+                Gated Luxury Villas
+              </span>
+</div>
+<div class="absolute bottom-space-sm right-space-sm bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded">
+              Reg #TN/ECR/2022/1904
+            </div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Monthly Yield</span>
+<span class="font-financial-md text-financial-md text-on-surface font-bold">₹1,85,000<span class="font-body-sm text-body-sm font-normal text-on-surface-variant">/mo</span></span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Potential Full Yield:</span>
+<span class="font-semibold text-primary font-label-md text-label-md">₹2,35,000 / mo</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-tertiary-container h-full rounded-full w-4/5"></div>
+</div>
+<div class="flex justify-between items-center font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>Occupancy Rate</span>
+<span class="text-tertiary font-semibold">80.0% (4 of 5 Units)</span>
+</div>
+</div>
+</div>
+<!-- Main Data Pane -->
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<!-- Header Row -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm mb-space-sm">
+<div>
+<div class="flex items-center gap-space-sm">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Palm Breeze Enclave</h3>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-tertiary-fixed/40 text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">info</span>
+                    1 Unit Available (4/5 Occupied)
+                  </span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[18px] text-outline">location_on</span>
+<span>58, East Coast Road (ECR), Palavakkam, Chennai, TN 600041</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Property Settings" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Features Tags -->
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Private Plunge Pools</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">24/7 Biometric Security</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">10kW Rooftop Solar Grid</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Beach Access Corridor</span>
+</div>
+<!-- Urgent Vacancy Callout Panel -->
+<div class="bg-gradient-to-r from-tertiary-fixed/30 via-tertiary-fixed/15 to-transparent p-space-md rounded-xl mb-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">notification_important</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-bold text-on-surface">Unit V-3 Vacant • Target Rent ₹50,000/mo</span>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest text-tertiary px-1.5 py-0.5 rounded font-medium">In Maintenance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                    Painting &amp; deep cleaning in progress. Verified listings currently active on 99acres &amp; MagicBricks with 7 incoming tenant inquiries.
+                  </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container transition-colors shadow-sm" type="button">
+                  View Enquiries (7)
+                </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-tertiary text-on-tertiary font-label-sm text-label-sm font-semibold hover:opacity-90 transition-opacity" type="button">
+                  Inspect Unit V-3
+                </button>
+</div>
+</div>
+<!-- Tenancy Snapshot Compact Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm mb-space-md">
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">Villa V-1</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface truncate mt-1">Vikramaditya Rao</div>
+<div class="font-financial-md text-financial-md text-[13px] text-on-surface-variant mt-0.5">₹48,000/mo</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">Villa V-2</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface truncate mt-1">Dr. Sangeetha R.</div>
+<div class="font-financial-md text-financial-md text-[13px] text-on-surface-variant mt-0.5">₹45,000/mo</div>
+</div>
+<div class="bg-surface-container-high/60 p-space-sm rounded-lg ring-1 ring-tertiary/20">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-tertiary">Villa V-3</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+</div>
+<div class="font-body-sm text-body-sm text-tertiary font-semibold truncate mt-1">VACANT (Painting)</div>
+<div class="font-financial-md text-financial-md text-[13px] text-on-surface-variant mt-0.5">Exp ₹50,000/mo</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">Villa V-4 &amp; V-5</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface truncate mt-1">Consulate Diplomat</div>
+<div class="font-financial-md text-financial-md text-[13px] text-on-surface-variant mt-0.5">₹92,000/mo (Combined)</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Deck -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+<span>Annual Solar Rebate Applied: ₹14,200/mo Savings</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded-xl bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+<span>Syndicate Listings</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded-xl bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">group</span>
+<span>Manage Tenancies</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded-xl bg-gradient-to-r from-primary-container to-[#06b6d4] font-label-md text-label-md text-on-primary shadow-sm hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Vacant Unit V-3</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROPERTY CARD 3: Metro Commercial Hub -->
+<section class="property-card bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all hover:shadow-md" data-category="commercial" data-keywords="metro commercial hub mount road guindy t nagar office retail grade a gst">
+<div class="p-space-lg flex flex-col lg:flex-row gap-space-lg">
+<!-- Asset Visual & Prime Specs Column -->
+<div class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-space-md">
+<div class="relative h-52 w-full rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Imposing modern glass and steel commercial office facade on Mount Road Chennai in bright clear daylight with corporate retail showrooms on ground floor, clean architectural reflections, manicured urban plaza" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxv5fkOgHvsuWzN6ePvdrgTP7TZbmne3P2pJrHH77MOqtfZV_Uif62p2nhwhKOjx2fOYORiLcjiYvaFW9zWgt3bOWAOqQacNwZe_43E8JzB8lmp312OYy1VkdW5n-IOdKcEGM36CrM4oQFVOdh92El6IHaqUCkAc7ZfuRXRe6MyPu4nRKD6wvOuEaAzePuOVv2W5yhoj4z9Mjrxo9qbocdBrlHiEVXY1SyNhDToHIczZE2kfhxQmjn"/>
+<div class="absolute top-space-sm left-space-sm">
+<span class="inline-flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-full font-label-sm text-label-sm text-secondary font-bold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+                Commercial Grade-A
+              </span>
+</div>
+<div class="absolute bottom-space-sm right-space-sm bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded">
+              GSTIN: 33AAACR2938L1Z9
+            </div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Commercial Rental Yield</span>
+<span class="font-financial-md text-financial-md text-secondary font-bold">₹2,20,000<span class="font-body-sm text-body-sm font-normal text-on-surface-variant">/mo</span></span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Escalation Clause:</span>
+<span class="font-semibold text-on-surface font-label-md text-label-md">5% YoY Locked</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-primary-container h-full rounded-full w-full"></div>
+</div>
+<div class="flex justify-between items-center font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>Institutional Occupancy</span>
+<span class="text-primary font-semibold">100% (7 Suites Leased)</span>
+</div>
+</div>
+</div>
+<!-- Main Data Pane -->
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<!-- Header Row -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm mb-space-sm">
+<div>
+<div class="flex items-center gap-space-sm">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Metro Commercial Hub</h3>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-primary-container/20 text-on-primary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                    7/7 Suites Occupied (100%)
+                  </span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[18px] text-outline">location_on</span>
+<span>88, Mount Road, Guindy / T. Nagar Junction, Chennai, TN 600032</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Property Settings" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Features & Regulatory Badges -->
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">3 Tech Consultancies</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">4 Prime Retail Outlets</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Sub-Registrar Endorsed Stamp Deeds</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Central HVAC &amp; Fire NOC Active</span>
+</div>
+<!-- Commercial Tenant Matrix Bento Box -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm mb-space-md">
+<!-- Sector 1: Tech & Corporate -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Corporate Office Suites (Levels 2-4)</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">3 Corporate Deeds</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-medium text-on-surface">Suite 401: CloudScale Technologies</span>
+<span class="font-financial-md text-financial-md text-[13px] text-on-surface">₹65,000/mo</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-medium text-on-surface">Suite 301: Nexus Analytics LLP</span>
+<span class="font-financial-md text-financial-md text-[13px] text-on-surface">₹45,000/mo</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-medium text-on-surface">Suite 201: Finserve Global Advisory</span>
+<span class="font-financial-md text-financial-md text-[13px] text-on-surface">₹40,000/mo</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>TDS Deducted at 10% (194I)</span>
+<span class="text-primary font-semibold">Quarterly Reconciliation Valid</span>
+</div>
+</div>
+<!-- Sector 2: Ground Floor Retail -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Ground Floor High-Street Retail</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">4 Retail Outlets</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-medium text-on-surface">Shop G-1: Blue Tokai Specialty Coffee</span>
+<span class="font-financial-md text-financial-md text-[13px] text-on-surface">₹30,000/mo</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-medium text-on-surface">Shop G-2: Apollo 24/7 Pharmacy</span>
+<span class="font-financial-md text-financial-md text-[13px] text-on-surface">₹20,000/mo</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-medium text-on-surface">Shop G-3 &amp; G-4: Organic Mandi &amp; Dry Fruits</span>
+<span class="font-financial-md text-financial-md text-[13px] text-on-surface">₹20,000/mo</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Footfall Density Rating</span>
+<span class="text-secondary font-semibold">High Transit Zone (Mount Rd)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Deck -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">receipt_long</span>
+<span>18% GST Compliant • Invoices Auto-Generated on 1st</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded-xl bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+<span>Commercial Lease Deeds</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded-xl bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">account_balance_wallet</span>
+<span>View Tax Invoices</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded-xl bg-gradient-to-r from-primary-container to-[#06b6d4] font-label-md text-label-md text-on-primary shadow-sm hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">settings_input_component</span>
+<span>Unit Config</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Interactive JavaScript for Live Filter & Category Tabs -->
+<script>
+    (function initPortfolioManager() {
+      const searchInput = document.getElementById('propertySearchInput');
+      const cards = document.querySelectorAll('.property-card');
+      const filterTabs = document.querySelectorAll('.filter-tab');
+      let currentCategory = 'all';
+
+      function applyFilters() {
+        const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
+
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const keywords = card.getAttribute('data-keywords') || '';
+          const textContent = card.innerText.toLowerCase();
+
+          const matchesCategory = currentCategory === 'all' || category === currentCategory;
+          const matchesQuery = !query || keywords.includes(query) || textContent.includes(query);
+
+          if (matchesCategory && matchesQuery) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', applyFilters);
+      }
+
+      filterTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          filterTabs.forEach(t => {
+            t.classList.remove('bg-inverse-surface', 'text-inverse-on-surface', 'active-tab');
+            t.classList.add('bg-surface', 'text-on-surface');
+          });
+
+          tab.classList.remove('bg-surface', 'text-on-surface');
+          tab.classList.add('bg-inverse-surface', 'text-inverse-on-surface', 'active-tab');
+
+          currentCategory = tab.getAttribute('data-filter') || 'all';
+          applyFilters();
+        });
+      });
+    })();
+  </script>
+</div></main></div></body></html>

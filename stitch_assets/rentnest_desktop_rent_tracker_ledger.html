@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#140067", "tertiary-fixed": "#ffdea8", "primary": "#006c49", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "surface": "#fbf8ff", "error": "#ba1a1a", "primary-container": "#10b981", "inverse-on-surface": "#f0efff", "surface-dim": "#d4d8f7", "on-tertiary-container": "#4d3500", "on-primary-container": "#00422b", "secondary-fixed-dim": "#c5c0ff", "surface-tint": "#006c49", "background": "#fbf8ff", "on-primary": "#ffffff", "surface-bright": "#fbf8ff", "secondary-fixed": "#e3dfff", "tertiary-fixed-dim": "#f9bc45", "surface-variant": "#dde1ff", "surface-container-high": "#e5e7ff", "tertiary": "#7c5800", "primary-fixed-dim": "#4edea3", "secondary-container": "#938afd", "tertiary-container": "#d19922", "on-surface": "#151a31", "on-surface-variant": "#3c4a42", "on-tertiary-fixed": "#271900", "on-tertiary-fixed-variant": "#5e4200", "secondary": "#584ebe", "inverse-primary": "#4edea3", "primary-fixed": "#6ffbbe", "inverse-surface": "#2a2f47", "on-primary-fixed": "#002113", "outline": "#6c7a71", "on-error": "#ffffff", "outline-variant": "#bbcabf", "error-container": "#ffdad6", "on-background": "#151a31", "surface-container-highest": "#dde1ff", "on-error-container": "#93000a", "on-primary-fixed-variant": "#005236", "on-secondary-container": "#28178e", "surface-container-low": "#f3f2ff", "surface-container": "#ececff", "on-secondary-fixed-variant": "#3f34a4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "space-md": "1rem", "gutter": "1rem", "gutter-tablet": "1.5rem", "space-lg": "1.5rem", "margin-tablet": "2rem", "gutter-desktop": "2rem", "space-sm": "0.5rem", "margin": "1rem", "margin-desktop": "3rem", "space-xs": "0.25rem" }, "fontFamily": { "body-lg": [ "Plus Jakarta Sans" ], "financial-xl": [ "Inter" ], "display-lg-mobile": [ "Plus Jakarta Sans" ], "label-sm": [ "Inter" ], "label-md": [ "Inter" ], "headline-xl": [ "Plus Jakarta Sans" ], "financial-md": [ "Inter" ], "display-lg": [ "Plus Jakarta Sans" ], "label-lg": [ "Inter" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "financial-xl-mobile": [ "Inter" ], "body-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "financial-xl": [ "32px", { "lineHeight": "38px", "fontWeight": "700" } ], "display-lg-mobile": [ "32px", { "lineHeight": "40px", "fontWeight": "800" } ], "label-sm": [ "11px", { "lineHeight": "14px", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "fontWeight": "500" } ], "headline-xl": [ "28px", { "lineHeight": "36px", "fontWeight": "700" } ], "financial-md": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "display-lg": [ "40px", { "lineHeight": "48px", "fontWeight": "800" } ], "label-lg": [ "14px", { "lineHeight": "18px", "fontWeight": "600" } ], "headline-lg": [ "22px", { "lineHeight": "28px", "fontWeight": "700" } ], "headline-md": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "financial-xl-mobile": [ "26px", { "lineHeight": "32px", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low z-50 flex flex-col justify-between p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm px-space-xs py-space-xs"><img alt="Brand logo. - Primary color: #10b981
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VN5wXcVskC2OaGVtI326tn7FPbxRGPRkkIW9ZMoF308ofHE6pURgHgpXQXsHv_7s2nrzP3EMqtaY2Zgk4GIzIQWBXLXwA9A-7_-jTJQNNGuAGzR80R76yW_GrXKA3ztoz580jUmw1TvAOtlwURt1I0ODPXgkSam9Q22IjCpUsufLuL24a4Hv9nPZX2stKgptPSQ00adTUA31rH7u_ybZHQLC0nEwvwdpuElL2S4Lce_8phvwq2U4qPSw"/><span class="font-headline-lg text-headline-lg tracking-tight text-on-surface">RentNest</span></div><div class="flex items-center justify-between px-space-sm py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">apartment</span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface truncate max-w-[140px]">Chennai Portfolio</span><span class="font-label-sm text-label-sm text-on-surface-variant">3 Properties Active</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-md"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="properties" href="#"><span class="material-symbols-outlined text-[20px]">real_estate_agent</span><span>Properties</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl transition-all bg-primary-container text-on-primary-container font-headline-md" data-path="rent-ledger" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Rent Ledger</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="agreements" href="#"><span class="material-symbols-outlined text-[20px]">description</span><span>Agreements</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tenants" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Tenants</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reminders" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span>Reminders</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></a></nav></div><div class="pt-space-md"><div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1V2YdLrcc_MmO4FP-s6yKc5Nn2hgM-b6O6zEvP9QxFn1ct2mmFiaGcHxRscz6k6M6BFQ9Lg7IidiNS8TAWtNtN7-dY3LDet7fo7UpHFIiKiRU3J15DJV_j3hFmStCroxzt-_Y-NpBKAYZXiUbgwIVstvOZDNYQPrzEP2_WVLAh_uOBN3GJALQd7nkVQ_BBXM6Te-FEQvPHmF4umkwLh0melR9spph0Je0n4SPA1xk4Pxckuty2e7lur0A"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface">Rajeshwar S.</span><div class="flex items-center gap-1"><span class="font-label-sm text-label-sm text-tertiary font-semibold">Pro Landlord</span></div></div></div><button class="text-on-surface-variant hover:text-on-surface flex items-center p-space-xs" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-2 rounded-xl shadow-[0_2px_8px_-2px_rgba(11,16,38,0.04)] w-full text-on-surface-variant focus-within:text-on-surface"><span class="material-symbols-outlined text-[18px] text-outline">search</span><input class="bg-transparent w-full text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none" placeholder="Search tenants, properties, transactions, agreement deeds..." type="text"/><kbd class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 rounded bg-surface-container">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1.5 rounded-xl bg-surface-container font-label-md text-label-md text-on-surface cursor-pointer hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">domain</span><span>All Units</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><button class="inline-flex items-center gap-space-xs px-space-md py-2 bg-gradient-to-r from-primary-container to-[#06b6d4] text-on-primary rounded-xl font-label-lg text-label-lg shadow-[0_4px_14px_rgba(16,185,129,0.35)] hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Quick Action</span></button><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/30" src="https://lh3.googleusercontent.com/aida/AEtjO1V2YdLrcc_MmO4FP-s6yKc5Nn2hgM-b6O6zEvP9QxFn1ct2mmFiaGcHxRscz6k6M6BFQ9Lg7IidiNS8TAWtNtN7-dY3LDet7fo7UpHFIiKiRU3J15DJV_j3hFmStCroxzt-_Y-NpBKAYZXiUbgwIVstvOZDNYQPrzEP2_WVLAh_uOBN3GJALQd7nkVQ_BBXM6Te-FEQvPHmF4umkwLh0melR9spph0Je0n4SPA1xk4Pxckuty2e7lur0A"/></div></div></header><main class="flex-1 pt-16 bg-surface px-gutter-desktop py-space-xl"><div class="flex flex-col w-full gap-space-lg pb-space-xl">
+<!-- Top Command & Period Navigation Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Financial Hub / Portfolio Inflows</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live Synchronized</span>
+</div>
+<h1 class="font-display-lg text-headline-xl text-on-surface tracking-tight">Rent Ledger &amp; Inflow Management</h1>
+</div>
+<!-- Date Month Switcher & High-Level Actions -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-lowest px-space-xs py-1 rounded-xl shadow-sm">
+<button aria-label="Previous month" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<div class="flex items-center gap-space-xs px-space-sm py-1 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_month</span>
+<span class="font-headline-md text-headline-md text-on-surface select-none">October 2024</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Current</span>
+</div>
+<button aria-label="Next month" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded-xl font-label-lg text-label-lg shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">file_download</span>
+<span>Export CSV / Excel</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 bg-surface-container-lowest hover:bg-surface-container text-primary rounded-xl font-label-lg text-label-lg shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+<span>Sync Bank Accounts</span>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+</button>
+</div>
+</div>
+<!-- Global Collection Summary Hero (RentNest Midnight Indigo Card) -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0B1026] via-[#151a31] to-[#3B2FA0] text-on-secondary p-space-lg lg:p-space-xl shadow-xl">
+<!-- Subtle architectural light layer -->
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-primary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/3 -bottom-24 w-72 h-72 bg-secondary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest/10 backdrop-blur-md flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">monetization_on</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg font-bold text-on-secondary tracking-tight">Chennai Portfolio Reconciliation</span>
+<span class="font-body-sm text-body-sm text-surface-dim/80">Monthly aggregate cycle: Oct 01, 2024 – Oct 31, 2024</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest/10 backdrop-blur-md px-space-md py-1.5 rounded-full">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim font-medium tracking-wide">3 Banking Portals Auto-Reconciled</span>
+</div>
+</div>
+<!-- Core Financial KPIs Bento Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1: Expected -->
+<div class="flex flex-col bg-surface-container-lowest/5 backdrop-blur-sm rounded-xl p-space-md hover:bg-surface-container-lowest/10 transition-colors">
+<span class="font-label-md text-label-md text-surface-dim uppercase tracking-wider">Total Expected</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-financial-xl text-financial-xl text-on-secondary font-bold tracking-tight">₹3,90,000</span>
+</div>
+<span class="font-body-sm text-body-sm text-surface-dim/70 mt-1">5 Properties • 18 Total Leases</span>
+</div>
+<!-- Metric 2: Collected So Far -->
+<div class="flex flex-col bg-surface-container-lowest/5 backdrop-blur-sm rounded-xl p-space-md hover:bg-surface-container-lowest/10 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-surface-dim uppercase tracking-wider">Collected So Far</span>
+<span class="font-label-sm text-label-sm font-bold text-primary-fixed px-2 py-0.5 rounded-full bg-primary-container/20">88.5%</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-financial-xl text-financial-xl text-primary-fixed font-bold tracking-tight">₹3,45,000</span>
+</div>
+<span class="font-body-sm text-body-sm text-surface-dim/70 mt-1">15 Units cleared on or before due date</span>
+</div>
+<!-- Metric 3: Pending -->
+<div class="flex flex-col bg-surface-container-lowest/5 backdrop-blur-sm rounded-xl p-space-md hover:bg-surface-container-lowest/10 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-surface-dim uppercase tracking-wider">Pending Balance</span>
+<span class="font-label-sm text-label-sm font-semibold text-tertiary-fixed px-2 py-0.5 rounded-full bg-tertiary-container/30">11.5%</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-financial-xl text-financial-xl text-tertiary-fixed-dim font-bold tracking-tight">₹45,000</span>
+</div>
+<span class="font-body-sm text-body-sm text-surface-dim/70 mt-1">3 Active units with upcoming dues</span>
+</div>
+<!-- Metric 4: Overdue -->
+<div class="flex flex-col bg-surface-container-lowest/5 backdrop-blur-sm rounded-xl p-space-md hover:bg-surface-container-lowest/10 transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-surface-dim uppercase tracking-wider">Overdue</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary-fixed px-2 py-0.5 rounded-full bg-primary-container/20">0%</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-financial-xl text-financial-xl text-on-secondary font-bold tracking-tight">₹0</span>
+</div>
+<div class="flex items-center gap-1 text-primary-fixed-dim font-body-sm text-body-sm mt-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Healthy portfolio index</span>
+</div>
+</div>
+</div>
+<!-- Segmented Inflow Health Bar -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-surface-dim font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span>Cleared (88.5%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span>Upcoming Due (11.5%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span>Overdue (0%)</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-surface-dim/80">Target: ₹3,90,000</span>
+</div>
+<div class="w-full h-3 bg-surface-container-lowest/10 rounded-full overflow-hidden flex p-0.5">
+<div class="bg-primary-container rounded-l-full h-full transition-all duration-700" style="width: 88.5%"></div>
+<div class="bg-tertiary-fixed-dim h-full transition-all duration-700" style="width: 11.5%"></div>
+<div class="bg-error rounded-r-full h-full" style="width: 0%"></div>
+</div>
+</div>
+<!-- Bulk Quick-Action Alert Banner -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md p-space-md rounded-xl bg-surface-container-lowest/10 backdrop-blur-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container/30 text-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</div>
+<p class="font-body-md text-body-md text-surface-dim text-sm md:text-base leading-snug">
+<strong class="text-on-secondary font-semibold">3 Tenants have rent due within the next 48–72 hours.</strong> 
+            Send polite automated WhatsApp nudges with 1-click Google Pay &amp; PhonePe UPI smart-intent links.
+          </p>
+</div>
+<button class="shrink-0 inline-flex items-center justify-center gap-space-xs px-space-md py-2.5 bg-gradient-to-r from-primary-container to-[#06b6d4] text-on-primary rounded-xl font-label-lg text-label-lg shadow-md hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Send Bulk WhatsApp Reminders (3)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Filter & Segmented Toolbar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-2xl shadow-sm">
+<!-- Category Filter Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 lg:pb-0">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-on-surface text-on-secondary font-label-md text-label-md transition-all shadow-sm" type="button">
+<span>All Transactions</span>
+<span class="px-2 py-0.2 bg-surface-container-lowest/20 rounded-full font-label-sm text-label-sm">18</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Paid</span>
+<span class="px-1.5 py-0.2 text-primary font-semibold font-label-sm text-label-sm">15</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span>Pending</span>
+<span class="px-1.5 py-0.2 text-tertiary font-semibold font-label-sm text-label-sm">3</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>Overdue</span>
+<span class="px-1.5 py-0.2 text-on-surface-variant font-label-sm text-label-sm">0</span>
+</button>
+</div>
+<!-- Search & Secondary Filter Dropdowns -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-2 rounded-xl text-on-surface-variant focus-within:text-on-surface w-full sm:w-64">
+<span class="material-symbols-outlined text-[18px]">search</span>
+<input class="bg-transparent text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none w-full" placeholder="Search tenant or UTR..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-2 rounded-xl text-on-surface font-label-md text-label-md cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px] text-outline">payments</span>
+<span>Mode: <strong class="font-semibold">All Inflows</strong></span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+<button class="p-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Column Layout" type="button">
+<span class="material-symbols-outlined text-[20px]">view_column</span>
+</button>
+</div>
+</div>
+<!-- Comprehensive Ledger Table Container -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header Info Bar -->
+<div class="flex items-center justify-between px-space-lg py-space-md bg-surface-container-low/50">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-on-surface">Transaction Ledger</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Showing 5 of 18 records</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary-container"></span> Automated Match</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary-container"></span> GST Invoice Generated</span>
+</div>
+</div>
+<!-- Responsive Scrollable Data Grid -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-md px-space-lg">Tenant &amp; Unit</th>
+<th class="py-space-md px-space-md">Property Name</th>
+<th class="py-space-md px-space-md">Due Date</th>
+<th class="py-space-md px-space-md">Payment Date</th>
+<th class="py-space-md px-space-md text-right">Amount</th>
+<th class="py-space-md px-space-md">Mode &amp; Ref / UTR</th>
+<th class="py-space-md px-space-md text-center">Status</th>
+<th class="py-space-md px-space-lg text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent font-body-sm text-body-sm">
+<!-- Row 1: Rohan Varma -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 text-on-primary-container font-headline-md text-headline-md flex items-center justify-center shrink-0">
+                  RV
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Rohan Varma</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Unit 101 • 2 BHK Res.</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Greenfield Heights</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">OMR Road, Chennai</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface">
+              Oct 05, 2024
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check</span>
+                Oct 02, 2024
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-financial-md text-financial-md text-on-surface font-bold">₹28,000</span>
+<span class="block font-label-sm text-label-sm text-primary">+ On-time (Early)</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-primary">qr_code_scanner</span>
+<span>UPI (GPay)</span>
+</div>
+<span class="font-mono text-label-sm text-label-sm text-on-surface-variant">#92847192</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-container/15 text-primary font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Paid
+              </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs justify-end">
+<button class="p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="Download Receipt (PDF)" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary transition-colors" title="Send Receipt via WhatsApp" type="button">
+<span class="material-symbols-outlined text-[18px]">send_to_mobile</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Dr. K. Swaminathan -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed font-headline-md text-headline-md flex items-center justify-center shrink-0">
+                  KS
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Dr. K. Swaminathan</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Unit 203 • 3 BHK Lux</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Greenfield Heights</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">OMR Road, Chennai</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface">
+              Oct 05, 2024
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check</span>
+                Oct 01, 2024
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-financial-md text-financial-md text-on-surface font-bold">₹30,000</span>
+<span class="block font-label-sm text-label-sm text-primary">+ On-time (Early)</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">account_balance</span>
+<span>IMPS / HDFC Bank</span>
+</div>
+<span class="font-mono text-label-sm text-label-sm text-on-surface-variant">HDFC09230198</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-container/15 text-primary font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Paid
+              </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs justify-end">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Receipt</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Meera Krishnan (Pending) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group bg-tertiary-fixed/10">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-headline-md text-headline-md flex items-center justify-center shrink-0">
+                  MK
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Meera Krishnan</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Unit V-2 • Villa Garden</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Palm Breeze</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ECR Coastal, Chennai</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface font-semibold">
+              Oct 10, 2024
+            </td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant italic">Pending Inflow</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-financial-md text-financial-md text-on-surface font-bold">₹32,000</span>
+<span class="block font-label-sm text-label-sm text-tertiary font-semibold">Scheduled NACH</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-tertiary">autorenew</span>
+<span>NACH Auto-Debit</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mandate ID: #NC-893</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-tertiary-container/30 text-tertiary-container font-label-md text-label-md font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Due in 2 days
+              </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs justify-end">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-primary-container/15 hover:bg-primary-container/25 text-primary font-label-md text-label-md transition-colors" title="Remind on WhatsApp" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Remind</span>
+</button>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" title="Record Offline Cash / Cheque" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Record</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Pradeep & Divya (Pending) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group bg-tertiary-fixed/10">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed font-headline-md text-headline-md flex items-center justify-center shrink-0">
+                  PD
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Pradeep &amp; Divya</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Suite 304 • Commercial</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Metro Commercial</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Anna Salai, Chennai</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface font-semibold">
+              Oct 15, 2024
+            </td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant italic">Pending Inflow</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-financial-md text-financial-md text-on-surface font-bold">₹45,000</span>
+<span class="block font-label-sm text-label-sm text-outline">Upcoming Cycle</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">currency_rupee</span>
+<span>NEFT Mandate</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Standing Instruction</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-tertiary-container/30 text-tertiary-container font-label-md text-label-md font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Due in 5 days
+              </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs justify-end">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-primary-container/15 hover:bg-primary-container/25 text-primary font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Remind</span>
+</button>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Record</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: TechNova Solutions (High-value Commercial) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-on-surface text-surface-container-lowest font-headline-md text-headline-md flex items-center justify-center shrink-0">
+                  TS
+                </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-headline-md text-headline-md text-on-surface truncate">TechNova Solutions</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-semibold">Corporate</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Suite 101 • 4,500 sq.ft Floor</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Metro Commercial</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Anna Salai, Chennai</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface">
+              Oct 01, 2024
+            </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check</span>
+                Oct 01, 2024
+              </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-financial-md text-financial-md text-on-surface font-bold">₹1,10,000</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">+ 18% GST ₹19,800</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-primary">domain_verification</span>
+<span>RTGS Bank Transfer</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Invoice #RN-24-109</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-container/15 text-primary font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Paid
+              </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs justify-end">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-secondary text-on-secondary font-label-md text-label-md shadow-sm hover:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>GST Tax Invoice</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination / Quick Summary -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md px-space-lg py-space-md bg-surface-container-low/30">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span>Rows per page: <strong>10</strong></span>
+<span>•</span>
+<span>Reconciliation timestamp: <strong>Today, 11:42 AM IST</strong></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container transition-colors disabled:opacity-50" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">first_page</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container transition-colors disabled:opacity-50" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="font-label-md text-label-md px-space-sm py-1 rounded-lg bg-surface-container text-on-surface">Page 1 of 2</span>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Stats & Insights Bento Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Visual Insight 1: On-Time Collection Rate vs City Benchmark -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Benchmark Index</span>
+<span class="font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full bg-primary-container/15 text-primary">Top 5% Landlords</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">96% On-Time Collection Rate</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Your automated tenant reminder loops achieve 14% faster rent settlement than the Chennai city average (82%).</p>
+</div>
+<!-- Comparison Progress Display -->
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">Your Portfolio</span>
+<span class="font-bold text-primary">96%</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 96%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Chennai Metro Avg.</span>
+<span class="text-on-surface-variant">82%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Insight 2: Inflow Method Distribution -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Settlement Channels</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Inflow Velocity Breakdown</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time breakdown of payment rails utilized across your active tenancies.</p>
+</div>
+<!-- Mini Inflow Channels Bar Visual -->
+<div class="grid grid-cols-3 gap-space-xs my-space-sm">
+<div class="flex flex-col p-space-xs bg-surface-container-low rounded-xl text-center">
+<span class="font-financial-md text-financial-md font-bold text-primary">62%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">UPI / QR</span>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container-low rounded-xl text-center">
+<span class="font-financial-md text-financial-md font-bold text-secondary">28%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">RTGS / NEFT</span>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container-low rounded-xl text-center">
+<span class="font-financial-md text-financial-md font-bold text-tertiary">10%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">NACH / Auto</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Instant UPI settlements save avg. 2.4 banking days</span>
+</div>
+</div>
+<!-- Visual Insight 3: Automated Ledger Health & Auto-Match -->
+<div class="flex flex-col justify-between bg-gradient-to-br from-surface-container-low to-surface-container-high p-space-lg rounded-2xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider">Auto-Reconciled</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_awesome</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Zero Unmatched Bank Credits</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">All 15 deposits received this billing cycle matched automatically with tenant lease IDs and generated signed digital receipts.</p>
+</div>
+<div class="flex items-center justify-between pt-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<span class="font-label-md text-label-md text-on-surface">Audit Ready for FY 24–25</span>
+</div>
+<button class="px-space-md py-2 bg-surface-container-lowest text-on-surface hover:bg-surface-container rounded-xl font-label-md text-label-md shadow-sm transition-colors" type="button">
+          View Audit Log
+        </button>
+</div>
+</div>
+</div>
+<!-- Floating Sticky Bottom Quick Action Dock -->
+<div class="sticky bottom-6 z-30 flex justify-center mt-space-md pointer-events-none">
+<div class="pointer-events-auto inline-flex items-center gap-space-sm px-space-md py-2.5 rounded-full bg-[#0B1026]/95 backdrop-blur-xl shadow-2xl text-on-secondary ring-1 ring-white/10 hover:shadow-primary/20 transition-all duration-300">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 bg-gradient-to-r from-primary-container to-[#06b6d4] text-on-primary rounded-full font-label-lg text-label-lg shadow-md hover:scale-[1.02] active:scale-[0.98] transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Record Offline Cash / Cheque Rent</span>
+</button>
+<div class="h-6 w-px bg-surface-dim/20 hidden sm:block"></div>
+<button class="hidden sm:inline-flex items-center gap-space-xs px-space-sm py-2 text-surface-dim hover:text-on-secondary font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">outgoing_mail</span>
+<span>Batch Rent Invoices</span>
+</button>
+<button class="hidden md:inline-flex items-center gap-space-xs px-space-sm py-2 text-surface-dim hover:text-on-secondary font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Reconciliation Rules</span>
+</button>
+<button aria-label="Close or collapse quick bar" class="w-8 h-8 rounded-full flex items-center justify-center text-surface-dim hover:text-on-secondary hover:bg-surface-container-lowest/10 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</div>
+</div></main></div></body></html>

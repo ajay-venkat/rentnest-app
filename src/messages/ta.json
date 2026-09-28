@@ -1,0 +1,34 @@
+{
+  "Navigation": {
+    "dashboard": "முகப்பு மேலாண்மை (Dashboard)",
+    "properties": "சொத்துக்கள் பட்டியல் (Properties)",
+    "tenants": "குடிஇருப்பாளர்கள் (Tenants)",
+    "rent": "வாடகை கண்காணிப்பு (Rent Tracker)",
+    "agreements": "வாடகை ஒப்பந்தங்கள் (Agreements)",
+    "verification": "சரிபார்ப்பு (Verification)",
+    "reminders": "நினைவூட்டல்கள் (Reminders)",
+    "reports": "நிதி அறிக்கைகள் (Reports)",
+    "billing": "சந்தா திட்டம் (Billing)",
+    "settings": "அமைப்புகள் (Settings)"
+  },
+  "Dashboard": {
+    "welcome": "வணக்கம், நில உரிமையாளர்!",
+    "totalUnits": "மொத்த வாடகை வீடுகள்",
+    "occupancy": "வாடகை சதவீத நிலை",
+    "collected": "இந்த மாத வாடகை",
+    "pending": "நிலுவை வாடகை",
+    "quickActions": "விரைவு செயல்பாடுகள்",
+    "addProperty": "புதிய சொத்து",
+    "addTenant": "புதிய வாடகைதாரர்",
+    "renewAgreement": "ஒப்பந்த புதுப்பிப்பு",
+    "sendReminder": "நினைவூட்டல் அனுப்பு"
+  },
+  "Common": {
+    "save": "சேமிக்க",
+    "cancel": "ரத்து செய்க",
+    "delete": "நீக்குக",
+    "search": "தேடுக...",
+    "language": "Language / மொழி",
+    "upgrade": "திட்டம் புதுப்பிக்க"
+  }
+}
